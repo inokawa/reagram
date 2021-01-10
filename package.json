@@ -15,7 +15,10 @@
     "tsc:d": "tsc -p . --outDir lib -d --emitDeclarationOnly",
     "prepublishOnly": "rimraf lib && npm run build && npm run tsc:d"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@dagrejs/dagre": "0.8.0",
+    "dotparser": "1.0.0"
+  },
   "devDependencies": {
     "@rollup/plugin-typescript": "6.1.0",
     "react": "17.0.1",
