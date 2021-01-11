@@ -191,6 +191,275 @@ Array [
 ]
 `;
 
+exports[`parse data_structures.gv 1`] = `
+Array [
+  Object {
+    "attr": Object {
+      "rankdir": "LR",
+    },
+    "edges": Array [
+      Object {
+        "attr": Object {
+          "id": 0,
+        },
+        "from": "node0",
+        "to": "node1",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 1,
+        },
+        "from": "node0",
+        "to": "node2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 2,
+        },
+        "from": "node1",
+        "to": "node3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 3,
+        },
+        "from": "node1",
+        "to": "node4",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 4,
+        },
+        "from": "node1",
+        "to": "node5",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 5,
+        },
+        "from": "node4",
+        "to": "node3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 6,
+        },
+        "from": "node4",
+        "to": "node6",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 7,
+        },
+        "from": "node4",
+        "to": "node10",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 8,
+        },
+        "from": "node6",
+        "to": "node3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 9,
+        },
+        "from": "node6",
+        "to": "node7",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 10,
+        },
+        "from": "node6",
+        "to": "node9",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 11,
+        },
+        "from": "node7",
+        "to": "node3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 12,
+        },
+        "from": "node7",
+        "to": "node1",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 13,
+        },
+        "from": "node7",
+        "to": "node8",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 14,
+        },
+        "from": "node10",
+        "to": "node11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 15,
+        },
+        "from": "node10",
+        "to": "node12",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "id": 16,
+        },
+        "from": "node11",
+        "to": "node1",
+        "type": "edge",
+      },
+    ],
+    "id": "g",
+    "nodes": Array [
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 0x10ba8| <f1>",
+          "shape": "record",
+        },
+        "id": "node0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 0xf7fc4380| <f1> | <f2> |-1",
+          "shape": "record",
+        },
+        "id": "node1",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 0xf7fc44b8| | |2",
+          "shape": "record",
+        },
+        "id": "node2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 3.43322790286038071e-06|44.79998779296875|0",
+          "shape": "record",
+        },
+        "id": "node3",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 0xf7fc4380| <f1> | <f2> |2",
+          "shape": "record",
+        },
+        "id": "node4",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> (nil)| | |-1",
+          "shape": "record",
+        },
+        "id": "node5",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 0xf7fc4380| <f1> | <f2> |1",
+          "shape": "record",
+        },
+        "id": "node6",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 0xf7fc4380| <f1> | <f2> |2",
+          "shape": "record",
+        },
+        "id": "node7",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> (nil)| | |-1",
+          "shape": "record",
+        },
+        "id": "node8",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> (nil)| | |-1",
+          "shape": "record",
+        },
+        "id": "node9",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> (nil)| <f1> | <f2> |-1",
+          "shape": "record",
+        },
+        "id": "node10",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> (nil)| <f1> | <f2> |-1",
+          "shape": "record",
+        },
+        "id": "node11",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "fontsize": "16",
+          "label": "<f0> 0xf7fc43e0| | |1",
+          "shape": "record",
+        },
+        "id": "node12",
+        "type": "node",
+      },
+    ],
+    "type": "digraph",
+  },
+]
+`;
+
 exports[`parse finite_automaton.gv 1`] = `
 Array [
   Object {
@@ -375,6 +644,644 @@ Array [
           "shape": "circle",
         },
         "id": "LR_7",
+        "type": "node",
+      },
+    ],
+    "type": "digraph",
+  },
+]
+`;
+
+exports[`parse unix_family_tree.gv 1`] = `
+Array [
+  Object {
+    "attr": Object {
+      "size": "6,6",
+    },
+    "edges": Array [
+      Object {
+        "attr": Object {},
+        "from": "5th Edition",
+        "to": "6th Edition",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "5th Edition",
+        "to": "PWB 1.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "6th Edition",
+        "to": "LSX",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "6th Edition",
+        "to": "1 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "6th Edition",
+        "to": "Mini Unix",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "6th Edition",
+        "to": "Wollongong",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "6th Edition",
+        "to": "Interdata",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "Interdata",
+        "to": "Unix/TS 3.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "Interdata",
+        "to": "PWB 2.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "Interdata",
+        "to": "7th Edition",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "7th Edition",
+        "to": "8th Edition",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "7th Edition",
+        "to": "32V",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "7th Edition",
+        "to": "V7M",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "7th Edition",
+        "to": "Ultrix-11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "7th Edition",
+        "to": "Xenix",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "7th Edition",
+        "to": "UniPlus+",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "V7M",
+        "to": "Ultrix-11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "8th Edition",
+        "to": "9th Edition",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "1 BSD",
+        "to": "2 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "2 BSD",
+        "to": "2.8 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "2.8 BSD",
+        "to": "Ultrix-11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "2.8 BSD",
+        "to": "2.9 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "32V",
+        "to": "3 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "3 BSD",
+        "to": "4 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "4 BSD",
+        "to": "4.1 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "4.1 BSD",
+        "to": "4.2 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "4.1 BSD",
+        "to": "2.8 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "4.1 BSD",
+        "to": "8th Edition",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "4.2 BSD",
+        "to": "4.3 BSD",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "4.2 BSD",
+        "to": "Ultrix-32",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "PWB 1.0",
+        "to": "PWB 1.2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "PWB 1.0",
+        "to": "USG 1.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "PWB 1.2",
+        "to": "PWB 2.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "USG 1.0",
+        "to": "CB Unix 1",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "USG 1.0",
+        "to": "USG 2.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "CB Unix 1",
+        "to": "CB Unix 2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "CB Unix 2",
+        "to": "CB Unix 3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "CB Unix 3",
+        "to": "Unix/TS++",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "CB Unix 3",
+        "to": "PDP-11 Sys V",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "USG 2.0",
+        "to": "USG 3.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "USG 3.0",
+        "to": "Unix/TS 3.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "PWB 2.0",
+        "to": "Unix/TS 3.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "Unix/TS 1.0",
+        "to": "Unix/TS 3.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "Unix/TS 3.0",
+        "to": "TS 4.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "Unix/TS++",
+        "to": "TS 4.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "CB Unix 3",
+        "to": "TS 4.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "TS 4.0",
+        "to": "System V.0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "System V.0",
+        "to": "System V.2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "System V.2",
+        "to": "System V.3",
+        "type": "edge",
+      },
+    ],
+    "id": "unix",
+    "nodes": Array [
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "5th Edition",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "6th Edition",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "PWB 1.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "LSX",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "1 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Mini Unix",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Wollongong",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Interdata",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Unix/TS 3.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "PWB 2.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "7th Edition",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "8th Edition",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "32V",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "V7M",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Ultrix-11",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Xenix",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "UniPlus+",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "9th Edition",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "2 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "2.8 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "2.9 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "3 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "4 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "4.1 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "4.2 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "4.3 BSD",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Ultrix-32",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "PWB 1.2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "USG 1.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "CB Unix 1",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "USG 2.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "CB Unix 2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "CB Unix 3",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Unix/TS++",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "PDP-11 Sys V",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "USG 3.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "Unix/TS 1.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "TS 4.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "System V.0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "System V.2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "color": "lightblue2",
+          "style": "filled",
+        },
+        "id": "System V.3",
         "type": "node",
       },
     ],
