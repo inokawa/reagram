@@ -5,16 +5,11 @@ import * as dot from "./types/dotparser";
 export type Graph = {
   type: "graph" | "digraph";
   id?: string;
-  nodes: (SubGraph | Node)[];
+  nodes: (Graph | Node)[];
   edges: Edge[];
+  attr: Attr;
 };
 
-export type SubGraph = {
-  type: "subgraph";
-  id?: string;
-  nodes: (SubGraph | Node)[];
-  edges: Edge[];
-};
 
 export type Node = {
   type: "node";
@@ -48,9 +43,19 @@ const reduceGraph = (graph: dot.Graph): Graph => {
   const nodeTemp: { [id: string]: Node } = {};
 
   const reduceStatements = (stmts: dot.Unknown[]) =>
-    stmts.reduce<[(SubGraph | Node)[], Edge[]]>(
+    stmts.reduce<[(Graph | Node)[], Edge[]]>(
       (acc, st) => {
         switch (st.type) {
+          case "subgraph":
+            const sgst = st as dot.Subgraph;
+            acc[0].push(
+              reduceGraph({
+                type: graph.type,
+                id: sgst.id,
+                children: sgst.children,
+              } as dot.Graph)
+            );
+            break;
           case "edge_stmt":
             const [edges, edgeNodes] = processEdge(
               st as dot.EdgeStatement,
@@ -100,6 +105,7 @@ const reduceGraph = (graph: dot.Graph): Graph => {
     id: graph.id,
     nodes,
     edges,
+    attr: graphAttr,
   };
 };
 
@@ -163,6 +169,6 @@ function mergeAttrList(attrs: dot.Attr[]) {
     if (n.type !== "attr" || !n.id) return acc;
     acc[n.id] = n.eq;
     return acc;
-  }, {} as { [key: string]: string });
+  }, {} as Attr);
 }
 
