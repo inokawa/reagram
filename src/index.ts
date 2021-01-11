@@ -121,7 +121,7 @@ const processNode = (
   nodeAttr: Attr
 ): Node[] => {
   const attr = mergeAttrList(node.attr_list || []);
-  const id = node.node_id;
+  const id = node.node_id.id;
   if (nodeTemp[id]) {
     nodeTemp[id].attr = { ...nodeTemp[id].attr, ...attr };
     return [];
@@ -152,7 +152,11 @@ const processEdge = (
   if (!nodeTemp[prevNode.id]) {
     nodes.push(
       ...processNode(
-        { type: "node_stmt", node_id: prevNode.id, attr_list: [] },
+        {
+          type: "node_stmt",
+          node_id: { type: "node_id", id: prevNode.id },
+          attr_list: [],
+        },
         nodeTemp,
         nodeAttr
       )
@@ -171,7 +175,11 @@ const processEdge = (
     if (!nodeTemp[nextNode.id]) {
       nodes.push(
         ...processNode(
-          { type: "node_stmt", node_id: nextNode.id, attr_list: [] },
+          {
+            type: "node_stmt",
+            node_id: { type: "node_id", id: nextNode.id },
+            attr_list: [],
+          },
           nodeTemp,
           nodeAttr
         )

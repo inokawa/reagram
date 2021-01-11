@@ -172,23 +172,17 @@ Array [
         "type": "digraph",
       },
       Object {
-        "attr": Object {},
+        "attr": Object {
+          "shape": "Mdiamond",
+        },
         "id": "start",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {},
-        "id": "end",
         "type": "node",
       },
       Object {
         "attr": Object {
           "shape": "Msquare",
         },
-        "id": Object {
-          "id": "start",
-          "type": "node_id",
-        },
+        "id": "end",
         "type": "node",
       },
     ],
@@ -324,17 +318,28 @@ Array [
         "attr": Object {
           "shape": "doublecircle",
         },
-        "id": Object {
-          "id": "LR_0",
-          "type": "node_id",
-        },
+        "id": "LR_0",
         "type": "node",
       },
       Object {
         "attr": Object {
-          "shape": "circle",
+          "shape": "doublecircle",
         },
-        "id": "LR_0",
+        "id": "LR_3",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "doublecircle",
+        },
+        "id": "LR_4",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "doublecircle",
+        },
+        "id": "LR_8",
         "type": "node",
       },
       Object {
@@ -355,13 +360,6 @@ Array [
         "attr": Object {
           "shape": "circle",
         },
-        "id": "LR_3",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {
-          "shape": "circle",
-        },
         "id": "LR_6",
         "type": "node",
       },
@@ -376,21 +374,7 @@ Array [
         "attr": Object {
           "shape": "circle",
         },
-        "id": "LR_4",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {
-          "shape": "circle",
-        },
         "id": "LR_7",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {
-          "shape": "circle",
-        },
-        "id": "LR_8",
         "type": "node",
       },
     ],

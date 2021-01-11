@@ -20,7 +20,7 @@ export type Subgraph = {
 
 export type NodeStatement = {
   type: "node_stmt";
-  node_id: string;
+  node_id: { type: "node_id"; id: string };
   attr_list: Attr[];
 };
 
