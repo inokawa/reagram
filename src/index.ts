@@ -43,30 +43,39 @@ export const parse = (text: string) => {
 
 const reduceGraph = (graph: dot.Graph): Graph => {
   let graphAttr: Attr = {};
-  let nodeGlobalAttr: Attr = {};
-  let edgeGlobalAttr: Attr = {};
+  let nodeAttr: Attr = {};
+  let edgeAttr: Attr = {};
   const nodeTemp: { [id: string]: Node } = {};
-  const edgeTemp: { [id: string]: Edge } = {};
 
   const reduceStatements = (stmts: dot.Unknown[]) =>
     stmts.reduce<[(SubGraph | Node)[], Edge[]]>(
       (acc, st) => {
         switch (st.type) {
           case "edge_stmt":
-            const edges = processEdge(st as dot.EdgeStatement);
+            const [edges, edgeNodes] = processEdge(
+              st as dot.EdgeStatement,
+              nodeTemp,
+              nodeAttr,
+              edgeAttr
+            );
+            acc[0].push(...edgeNodes);
             acc[1].push(...edges);
             break;
           case "node_stmt":
-            const nodes = processNode(st as dot.NodeStatement, nodeTemp);
+            const nodes = processNode(
+              st as dot.NodeStatement,
+              nodeTemp,
+              nodeAttr
+            );
             acc[0].push(...nodes);
             break;
           case "attr_stmt":
             const atst = st as dot.AttrStatement;
             const attrs = mergeAttrList(atst.attr_list);
             if (atst.target === "node") {
-              nodeGlobalAttr = { ...nodeGlobalAttr, ...attrs };
+              nodeAttr = { ...nodeAttr, ...attrs };
             } else if (atst.target === "edge") {
-              edgeGlobalAttr = { ...edgeGlobalAttr, ...attrs };
+              edgeAttr = { ...edgeAttr, ...attrs };
             } else if (atst.target === "graph") {
               graphAttr = { ...graphAttr, ...attrs };
             }
@@ -90,7 +99,8 @@ const reduceGraph = (graph: dot.Graph): Graph => {
 
 const processNode = (
   node: dot.NodeStatement,
-  nodeTemp: { [id: string]: Node }
+  nodeTemp: { [id: string]: Node },
+  nodeAttr: Attr
 ): Node[] => {
   const attr = mergeAttrList(node.attr_list || []);
   const id = node.node_id;
@@ -101,32 +111,45 @@ const processNode = (
     const node: Node = {
       type: "node",
       id,
-      attr,
+      attr: { ...nodeAttr, ...attr },
     };
     nodeTemp[id] = node;
     return [node];
   }
 };
 
-const processEdge = (node: dot.EdgeStatement): Edge[] => {
-  const edges = node.edge_list || [];
-  if (edges.length === 0) return [];
+const processEdge = (
+  node: dot.EdgeStatement,
+  nodeTemp: { [id: string]: Node },
+  nodeAttr: Attr,
+  edgeAttr: Attr
+): [Edge[], Node[]] => {
+  const edge_list = node.edge_list || [];
+  if (edge_list.length === 0) return [[], []];
 
-  const arr: Edge[] = [];
-  let prevNode = edges[0];
+  const edges: Edge[] = [];
+  let nodes: Node[] = [];
+  let prevNode = edge_list[0];
   const attr = mergeAttrList(node.attr_list || []);
-  for (let i = 1; i < edges.length; ++i) {
-    var nextNode = edges[i];
-    arr.push({
+  for (let i = 1; i < edge_list.length; ++i) {
+    var nextNode = edge_list[i];
+    edges.push({
       type: "edge",
       from: prevNode.id,
       to: nextNode.id,
-      attr: { ...attr },
+      attr: { ...edgeAttr, ...attr },
     });
+    if (!nodeTemp[prevNode.id]) {
+      nodes = processNode(
+        { type: "node_stmt", node_id: prevNode.id, attr_list: [] },
+        nodeTemp,
+        nodeAttr
+      );
+    }
     prevNode = nextNode;
   }
 
-  return arr;
+  return [edges, nodes];
 };
 
 function mergeAttrList(attrs: dot.Attr[]) {
