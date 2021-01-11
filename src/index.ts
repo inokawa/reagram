@@ -146,8 +146,19 @@ const processEdge = (
   if (edge_list.length === 0) return [[], []];
 
   const edges: Edge[] = [];
-  let nodes: Node[] = [];
+  const nodes: Node[] = [];
   let prevNode = edge_list[0];
+
+  if (!nodeTemp[prevNode.id]) {
+    nodes.push(
+      ...processNode(
+        { type: "node_stmt", node_id: prevNode.id, attr_list: [] },
+        nodeTemp,
+        nodeAttr
+      )
+    );
+  }
+
   const attr = mergeAttrList(node.attr_list || []);
   for (let i = 1; i < edge_list.length; ++i) {
     var nextNode = edge_list[i];
@@ -157,11 +168,13 @@ const processEdge = (
       to: nextNode.id,
       attr: { ...edgeAttr, ...attr },
     });
-    if (!nodeTemp[prevNode.id]) {
-      nodes = processNode(
-        { type: "node_stmt", node_id: prevNode.id, attr_list: [] },
-        nodeTemp,
-        nodeAttr
+    if (!nodeTemp[nextNode.id]) {
+      nodes.push(
+        ...processNode(
+          { type: "node_stmt", node_id: nextNode.id, attr_list: [] },
+          nodeTemp,
+          nodeAttr
+        )
       );
     }
     prevNode = nextNode;

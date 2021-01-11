@@ -83,7 +83,31 @@ Array [
               "color": "white",
               "style": "filled",
             },
+            "id": "a0",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "color": "white",
+              "style": "filled",
+            },
+            "id": "a1",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "color": "white",
+              "style": "filled",
+            },
             "id": "a2",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "color": "white",
+              "style": "filled",
+            },
+            "id": "a3",
             "type": "node",
           },
         ],
@@ -120,7 +144,28 @@ Array [
             "attr": Object {
               "style": "filled",
             },
+            "id": "b0",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "style": "filled",
+            },
+            "id": "b1",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "style": "filled",
+            },
             "id": "b2",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "style": "filled",
+            },
+            "id": "b3",
             "type": "node",
           },
         ],
@@ -133,7 +178,22 @@ Array [
       },
       Object {
         "attr": Object {},
+        "id": "a0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
+        "id": "b0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
         "id": "a1",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
+        "id": "b3",
         "type": "node",
       },
       Object {
@@ -148,7 +208,7 @@ Array [
       },
       Object {
         "attr": Object {},
-        "id": "b3",
+        "id": "end",
         "type": "node",
       },
       Object {
@@ -311,6 +371,13 @@ Array [
         "attr": Object {
           "shape": "circle",
         },
+        "id": "LR_2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
         "id": "LR_1",
         "type": "node",
       },
@@ -318,7 +385,14 @@ Array [
         "attr": Object {
           "shape": "circle",
         },
-        "id": "LR_2",
+        "id": "LR_3",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_6",
         "type": "node",
       },
       Object {
@@ -332,7 +406,7 @@ Array [
         "attr": Object {
           "shape": "circle",
         },
-        "id": "LR_6",
+        "id": "LR_4",
         "type": "node",
       },
       Object {
