@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse cluster.gv 1`] = `
+Array [
+  Object {
+    "attr": Object {},
+    "edges": Array [
+      Object {
+        "attr": Object {},
+        "from": "start",
+        "to": "a0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "start",
+        "to": "b0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "a1",
+        "to": "b3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "b2",
+        "to": "a3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "a3",
+        "to": "a0",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "a3",
+        "to": "end",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "b3",
+        "to": "end",
+        "type": "edge",
+      },
+    ],
+    "id": "G",
+    "nodes": Array [
+      Object {
+        "attr": Object {
+          "color": "lightgrey",
+          "label": "process #1",
+          "style": "filled",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "a0",
+            "to": "a1",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "a1",
+            "to": "a2",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "a2",
+            "to": "a3",
+            "type": "edge",
+          },
+        ],
+        "id": "cluster_0",
+        "nodes": Array [
+          Object {
+            "attr": Object {
+              "color": "white",
+              "style": "filled",
+            },
+            "id": "a2",
+            "type": "node",
+          },
+        ],
+        "type": "digraph",
+      },
+      Object {
+        "attr": Object {
+          "color": "blue",
+          "label": "process #2",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "b0",
+            "to": "b1",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "b1",
+            "to": "b2",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "b2",
+            "to": "b3",
+            "type": "edge",
+          },
+        ],
+        "id": "cluster_1",
+        "nodes": Array [
+          Object {
+            "attr": Object {
+              "style": "filled",
+            },
+            "id": "b2",
+            "type": "node",
+          },
+        ],
+        "type": "digraph",
+      },
+      Object {
+        "attr": Object {},
+        "id": "start",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
+        "id": "a1",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
+        "id": "b2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
+        "id": "a3",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
+        "id": "b3",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "Msquare",
+        },
+        "id": Object {
+          "id": "start",
+          "type": "node_id",
+        },
+        "type": "node",
+      },
+    ],
+    "type": "digraph",
+  },
+]
+`;
+
+exports[`parse finite_automaton.gv 1`] = `
+Array [
+  Object {
+    "attr": Object {
+      "rankdir": "LR",
+      "size": "8,5",
+    },
+    "edges": Array [
+      Object {
+        "attr": Object {
+          "label": "SS(B)",
+        },
+        "from": "LR_0",
+        "to": "LR_2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "SS(S)",
+        },
+        "from": "LR_0",
+        "to": "LR_1",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S($end)",
+        },
+        "from": "LR_1",
+        "to": "LR_3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "SS(b)",
+        },
+        "from": "LR_2",
+        "to": "LR_6",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "SS(a)",
+        },
+        "from": "LR_2",
+        "to": "LR_5",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(A)",
+        },
+        "from": "LR_2",
+        "to": "LR_4",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(b)",
+        },
+        "from": "LR_5",
+        "to": "LR_7",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(a)",
+        },
+        "from": "LR_5",
+        "to": "LR_5",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(b)",
+        },
+        "from": "LR_6",
+        "to": "LR_6",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(a)",
+        },
+        "from": "LR_6",
+        "to": "LR_5",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(b)",
+        },
+        "from": "LR_7",
+        "to": "LR_8",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(a)",
+        },
+        "from": "LR_7",
+        "to": "LR_5",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(b)",
+        },
+        "from": "LR_8",
+        "to": "LR_6",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {
+          "label": "S(a)",
+        },
+        "from": "LR_8",
+        "to": "LR_5",
+        "type": "edge",
+      },
+    ],
+    "id": "finite_state_machine",
+    "nodes": Array [
+      Object {
+        "attr": Object {
+          "shape": "doublecircle",
+        },
+        "id": Object {
+          "id": "LR_0",
+          "type": "node_id",
+        },
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_1",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_5",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_6",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_7",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "shape": "circle",
+        },
+        "id": "LR_8",
+        "type": "node",
+      },
+    ],
+    "type": "digraph",
+  },
+]
+`;
