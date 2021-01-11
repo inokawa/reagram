@@ -10,7 +10,6 @@ export type Graph = {
   attr: Attr;
 };
 
-
 export type Node = {
   type: "node";
   id: string;
@@ -30,16 +29,18 @@ export const parse = (text: string) => {
   const ast: dot.Unknown[] = parseDot(text);
   return ast.reduce((acc, node) => {
     if (node.type === "graph" || node.type === "digraph") {
-      acc.push(reduceGraph(node as dot.Graph));
+      acc.push(reduceGraph(node as dot.Graph, {}, {}, {}));
     }
     return acc;
   }, [] as Graph[]);
 };
 
-const reduceGraph = (graph: dot.Graph): Graph => {
-  const graphAttr: Attr = {};
-  const nodeAttr: Attr = {};
-  const edgeAttr: Attr = {};
+const reduceGraph = (
+  graph: dot.Graph,
+  graphAttr: Attr,
+  nodeAttr: Attr,
+  edgeAttr: Attr
+): Graph => {
   const nodeTemp: { [id: string]: Node } = {};
 
   const reduceStatements = (stmts: dot.Unknown[]) =>
@@ -49,11 +50,16 @@ const reduceGraph = (graph: dot.Graph): Graph => {
           case "subgraph":
             const sgst = st as dot.Subgraph;
             acc[0].push(
-              reduceGraph({
-                type: graph.type,
-                id: sgst.id,
-                children: sgst.children,
-              } as dot.Graph)
+              reduceGraph(
+                {
+                  type: graph.type,
+                  id: sgst.id,
+                  children: sgst.children,
+                } as dot.Graph,
+                { ...graphAttr },
+                { ...nodeAttr },
+                { ...edgeAttr }
+              )
             );
             break;
           case "edge_stmt":
