@@ -178,36 +178,6 @@ Array [
       },
       Object {
         "attr": Object {},
-        "id": "a0",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {},
-        "id": "b0",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {},
-        "id": "a1",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {},
-        "id": "b3",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {},
-        "id": "b2",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {},
-        "id": "a3",
-        "type": "node",
-      },
-      Object {
-        "attr": Object {},
         "id": "end",
         "type": "node",
       },

@@ -29,7 +29,7 @@ export const parse = (text: string) => {
   const ast: dot.Unknown[] = parseDot(text);
   return ast.reduce((acc, node) => {
     if (node.type === "graph" || node.type === "digraph") {
-      acc.push(reduceGraph(node as dot.Graph, {}, {}, {}));
+      acc.push(reduceGraph(node as dot.Graph, {}, {}, {}, {}));
     }
     return acc;
   }, [] as Graph[]);
@@ -39,10 +39,9 @@ const reduceGraph = (
   graph: dot.Graph,
   graphAttr: Attr,
   nodeAttr: Attr,
-  edgeAttr: Attr
+  edgeAttr: Attr,
+  nodeTemp: { [id: string]: Node }
 ): Graph => {
-  const nodeTemp: { [id: string]: Node } = {};
-
   const reduceStatements = (stmts: dot.Unknown[]) =>
     stmts.reduce<[(Graph | Node)[], Edge[]]>(
       (acc, st) => {
@@ -58,7 +57,8 @@ const reduceGraph = (
                 } as dot.Graph,
                 { ...graphAttr },
                 { ...nodeAttr },
-                { ...edgeAttr }
+                { ...edgeAttr },
+                nodeTemp
               )
             );
             break;
