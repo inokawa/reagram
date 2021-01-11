@@ -42,9 +42,9 @@ export const parse = (text: string) => {
 };
 
 const reduceGraph = (graph: dot.Graph): Graph => {
-  let graphAttr: Attr = {};
-  let nodeAttr: Attr = {};
-  let edgeAttr: Attr = {};
+  const graphAttr: Attr = {};
+  const nodeAttr: Attr = {};
+  const edgeAttr: Attr = {};
   const nodeTemp: { [id: string]: Node } = {};
 
   const reduceStatements = (stmts: dot.Unknown[]) =>
@@ -73,11 +73,17 @@ const reduceGraph = (graph: dot.Graph): Graph => {
             const atst = st as dot.AttrStatement;
             const attrs = mergeAttrList(atst.attr_list);
             if (atst.target === "node") {
-              nodeAttr = { ...nodeAttr, ...attrs };
+              Object.keys(attrs).forEach((id) => {
+                nodeAttr[id] = attrs[id];
+              });
             } else if (atst.target === "edge") {
-              edgeAttr = { ...edgeAttr, ...attrs };
+              Object.keys(attrs).forEach((id) => {
+                edgeAttr[id] = attrs[id];
+              });
             } else if (atst.target === "graph") {
-              graphAttr = { ...graphAttr, ...attrs };
+              Object.keys(attrs).forEach((id) => {
+                graphAttr[id] = attrs[id];
+              });
             }
             break;
           default:
