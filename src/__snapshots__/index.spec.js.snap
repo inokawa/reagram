@@ -652,6 +652,136 @@ Array [
 ]
 `;
 
+exports[`parse undirected_graph_clusters.gv 1`] = `
+Array [
+  Object {
+    "attr": Object {
+      "layout": "fdp",
+    },
+    "edges": Array [
+      Object {
+        "attr": Object {},
+        "from": "d",
+        "to": "D",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "e",
+        "to": "clusterB",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "clusterC",
+        "to": "clusterB",
+        "type": "edge",
+      },
+    ],
+    "id": "G",
+    "nodes": Array [
+      Object {
+        "attr": Object {},
+        "id": "e",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "layout": "fdp",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "a",
+            "to": "b",
+            "type": "edge",
+          },
+        ],
+        "id": "clusterA",
+        "nodes": Array [
+          Object {
+            "attr": Object {},
+            "id": "a",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {},
+            "id": "b",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "layout": "fdp",
+            },
+            "edges": Array [
+              Object {
+                "attr": Object {},
+                "from": "C",
+                "to": "D",
+                "type": "edge",
+              },
+            ],
+            "id": "clusterC",
+            "nodes": Array [
+              Object {
+                "attr": Object {},
+                "id": "C",
+                "type": "node",
+              },
+              Object {
+                "attr": Object {},
+                "id": "D",
+                "type": "node",
+              },
+            ],
+            "type": "graph",
+          },
+        ],
+        "type": "graph",
+      },
+      Object {
+        "attr": Object {
+          "layout": "fdp",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "d",
+            "to": "f",
+            "type": "edge",
+          },
+        ],
+        "id": "clusterB",
+        "nodes": Array [
+          Object {
+            "attr": Object {},
+            "id": "d",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {},
+            "id": "f",
+            "type": "node",
+          },
+        ],
+        "type": "graph",
+      },
+      Object {
+        "attr": Object {},
+        "id": "clusterB",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {},
+        "id": "clusterC",
+        "type": "node",
+      },
+    ],
+    "type": "graph",
+  },
+]
+`;
+
 exports[`parse unix_family_tree.gv 1`] = `
 Array [
   Object {
