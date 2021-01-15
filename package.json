@@ -1,6 +1,6 @@
 {
   "name": "reagram",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React component to render customizable graph/diagram.",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
