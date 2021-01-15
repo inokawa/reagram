@@ -1,6 +1,6 @@
 import React, { Fragment, memo, useMemo } from "react";
 // @ts-expect-error
-import dagre from "@dagrejs/dagre";
+import * as dagre from "@dagrejs/dagre";
 import { Graph, Node, Edge } from "./parser";
 
 export type Props = {
