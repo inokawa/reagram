@@ -1,2 +1,2 @@
 export { Renderer as default } from "./renderer";
-export { parse } from "./parser";
+export { parse as parseDot } from "./parser";
