@@ -16,6 +16,10 @@ https://inokawa.github.io/reagram/
 npm install reagram
 ```
 
+### Requirements
+
+- react 16.8+
+
 ## Usage
 
 TODO
