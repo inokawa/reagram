@@ -3,7 +3,7 @@ import cluster from "../fixtures/cluster.gv";
 import finite_automaton from "../fixtures/finite_automaton.gv";
 import unix_family_tree from "../fixtures/unix_family_tree.gv";
 
-import Dot, { parseDot } from "../src";
+import Reagram, { parseDot } from "../src";
 
 export default {
   title: "Dot",
@@ -54,7 +54,7 @@ export const Cluster = () => {
   return (
     <svg width="1000" height="1000">
       <g transform="translate(50,50)">
-        <Dot
+        <Reagram
           data={parseDot(cluster)[0]}
           nodeRender={nodeRender}
           edgeRender={edgeRender}
@@ -68,7 +68,7 @@ export const FiniteStateMachine = () => {
   return (
     <svg width="1000" height="1000">
       <g transform="translate(50,50)">
-        <Dot
+        <Reagram
           data={parseDot(finite_automaton)[0]}
           nodeRender={nodeRender}
           edgeRender={edgeRender}
@@ -82,7 +82,7 @@ export const UnixFamilyTree = () => {
   return (
     <svg width="1000" height="1000">
       <g transform="translate(50,50)">
-        <Dot
+        <Reagram
           data={parseDot(unix_family_tree)[0]}
           nodeRender={nodeRender}
           edgeRender={edgeRender}
