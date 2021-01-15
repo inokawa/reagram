@@ -1,7 +1,7 @@
 {
   "name": "reagram",
   "version": "0.0.0",
-  "description": "",
+  "description": "React component to render customizable graph/diagram.",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
@@ -43,7 +43,15 @@
     "type": "git",
     "url": "git+https://github.com/inokawa/reagram.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "graph",
+    "diagram",
+    "dagre",
+    "graphviz",
+    "dot",
+    "svg"
+  ],
   "author": "inokawa <stratoooo-taster@yahoo.co.jp> (https://github.com/inokawa/)",
   "license": "MIT",
   "bugs": {
