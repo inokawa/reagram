@@ -9,20 +9,36 @@ export default {
   title: "Dot",
 };
 
-const nodeRender = (n) => (
-  <g>
-    <rect
-      x={n.point.x - 10}
-      y={n.point.y - 10}
-      width="20"
-      height="20"
-      fill="gray"
-    />
-    <text x={n.point.x} y={n.point.y}>
-      {n.data.id}
-    </text>
-  </g>
-);
+const nodeRender = (n) =>
+  n.data.type === "node" ? (
+    <g>
+      <rect
+        x={n.point.x - 10}
+        y={n.point.y - 10}
+        width="20"
+        height="20"
+        fill="gray"
+      />
+      <text x={n.point.x} y={n.point.y}>
+        {n.data.id}
+      </text>
+    </g>
+  ) : (
+    <g>
+      <rect
+        x={n.point.x - 50}
+        y={n.point.y - 120}
+        width="100"
+        height="240"
+        fillOpacity="0.2"
+        fill="lightgray"
+        stroke="lightgray"
+      />
+      <text x={n.point.x} y={n.point.y}>
+        {n.data.id}
+      </text>
+    </g>
+  );
 
 const edgeRender = (n) => (
   <line
