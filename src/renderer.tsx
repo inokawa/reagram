@@ -22,6 +22,7 @@ type GraphOpts = {
   nodesep?: number;
   edgesep?: number;
   ranksep?: number;
+  acyclicer?: "greedy";
 };
 
 export const Renderer = memo(
@@ -35,6 +36,7 @@ export const Renderer = memo(
     nodesep,
     edgesep,
     ranksep,
+    acyclicer,
   }: Props) => {
     const [graph, nodeMap, edgeMap] = useMemo(() => {
       const nodeMap: { [key: string]: Node } = {};
@@ -47,11 +49,12 @@ export const Renderer = memo(
       });
 
       const graphOpts: GraphOpts = {};
-      rankdir && (graphOpts.rankdir = rankdir);
-      align && (graphOpts.align = align);
-      nodesep && (graphOpts.nodesep = nodesep);
-      edgesep && (graphOpts.edgesep = edgesep);
-      ranksep && (graphOpts.ranksep = ranksep);
+      rankdir !== undefined && (graphOpts.rankdir = rankdir);
+      align !== undefined && (graphOpts.align = align);
+      nodesep !== undefined && (graphOpts.nodesep = nodesep);
+      edgesep !== undefined && (graphOpts.edgesep = edgesep);
+      ranksep !== undefined && (graphOpts.ranksep = ranksep);
+      acyclicer !== undefined && (graphOpts.acyclicer = acyclicer);
       g.setGraph(graphOpts);
 
       g.setDefaultNodeLabel(() => ({}));
