@@ -5,7 +5,65 @@ export default {
   title: "sample",
 };
 
-export const Letters = () => {
+export const Cluster = () => {
+  return (
+    <svg width="1000" height="1000">
+      <g transform="translate(50,50)">
+        <Dot
+          data={
+            parse(`
+// https://graphviz.org/Gallery/directed/cluster.html
+
+digraph G {
+
+  subgraph cluster_0 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    a0 -> a1 -> a2 -> a3;
+    label = "process #1";
+  }
+
+  subgraph cluster_1 {
+    node [style=filled];
+    b0 -> b1 -> b2 -> b3;
+    label = "process #2";
+    color=blue
+  }
+  start -> a0;
+  start -> b0;
+  a1 -> b3;
+  b2 -> a3;
+  a3 -> a0;
+  a3 -> end;
+  b3 -> end;
+
+  start [shape=Mdiamond];
+  end [shape=Msquare];
+}            
+`)[0]
+          }
+          nodeRender={(n) => (
+            <text x={n.point.x} y={n.point.y}>
+              {n.data.id}
+            </text>
+          )}
+          edgeRender={(n) => (
+            <line
+              x1={n.points[0].x}
+              y1={n.points[0].y}
+              x2={n.points[n.points.length - 1].x}
+              y2={n.points[n.points.length - 1].y}
+              stroke="steelblue"
+            />
+          )}
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const FiniteStateMachine = () => {
   return (
     <svg width="1000" height="1000">
       <g transform="translate(50,50)">

@@ -31,18 +31,22 @@ export const Renderer = memo(
       g.setDefaultNodeLabel(() => ({}));
       g.setDefaultEdgeLabel(() => ({}));
 
+      const setNode = (node: Node, parentId?: string) => {
+        g.setNode(node.id, { width: 10, height: 10 });
+        nodeMap[node.id] = node;
+        if (parentId) {
+          g.setParent(node.id, parentId);
+        }
+      };
       const processNode = (node: Graph | Node, parentId?: string) => {
         if (node.type === "graph" || node.type === "digraph") {
+          setNode((node as any) as Node /* TODO */, parentId);
           node.nodes.forEach((n) => {
             processNode(n, node.id);
           });
           node.edges.forEach(processEdge);
         } else if (node.type === "node") {
-          g.setNode(node.id, { width: 10, height: 10 });
-          nodeMap[node.id] = node;
-          if (parentId) {
-            g.setParent(node.id, parentId);
-          }
+          setNode(node, parentId);
         }
       };
       const processEdge = (edge: Edge) => {
