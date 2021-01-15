@@ -96,19 +96,19 @@ export const Renderer = memo(
     }, [data]);
 
     const nodes: React.ReactNode[] = [];
-    graph.nodes().forEach((id: any) => {
-      const n = graph.node(id);
-      nodes.push(
-        <Fragment key={id}>
-          {nodeRender({ data: nodeMap[id], point: { x: n.x, y: n.y } })}
-        </Fragment>
-      );
-    });
     graph.edges().forEach((e: any) => {
       const points = graph.edge(e).points;
       nodes.push(
         <Fragment key={`${e.v}-${e.w}`}>
           {edgeRender({ data: edgeMap[`${e.v}-${e.w}`], points })}
+        </Fragment>
+      );
+    });
+    graph.nodes().forEach((id: any) => {
+      const n = graph.node(id);
+      nodes.push(
+        <Fragment key={id}>
+          {nodeRender({ data: nodeMap[id], point: { x: n.x, y: n.y } })}
         </Fragment>
       );
     });

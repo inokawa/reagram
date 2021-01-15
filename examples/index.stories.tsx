@@ -16,9 +16,18 @@ export const Cluster = () => {
         <Dot
           data={parse(cluster)[0]}
           nodeRender={(n) => (
-            <text x={n.point.x} y={n.point.y}>
-              {n.data.id}
-            </text>
+            <g>
+              <rect
+                x={n.point.x - 10}
+                y={n.point.y - 10}
+                width="20"
+                height="20"
+                fill="gray"
+              />
+              <text x={n.point.x} y={n.point.y}>
+                {n.data.id}
+              </text>
+            </g>
           )}
           edgeRender={(n) => (
             <line
@@ -26,7 +35,7 @@ export const Cluster = () => {
               y1={n.points[0].y}
               x2={n.points[n.points.length - 1].x}
               y2={n.points[n.points.length - 1].y}
-              stroke="steelblue"
+              stroke="lightgray"
             />
           )}
         />
