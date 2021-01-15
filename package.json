@@ -25,6 +25,7 @@
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
     "@babel/preset-typescript": "7.12.7",
+    "@rollup/plugin-commonjs": "17.0.0",
     "@rollup/plugin-typescript": "6.1.0",
     "@storybook/addon-actions": "6.1.14",
     "@storybook/addon-essentials": "6.1.14",
