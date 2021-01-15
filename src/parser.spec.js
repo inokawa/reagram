@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { parse } from "./index";
+import { parse } from "./parser";
 
 const fixturesDir = path.join(__dirname, "../fixtures");
 
