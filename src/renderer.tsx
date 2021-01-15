@@ -14,10 +14,19 @@ export type Props = {
     data: Edge;
     points: { x: number; y: number }[];
   }) => React.ReactNode;
+  rankdir?: "TB" | "BT" | "LR" | "RL";
+  align?: "UL" | "UR" | "DL" | "DR";
 };
 
 export const Renderer = memo(
-  ({ data, graphRender, nodeRender, edgeRender }: Props) => {
+  ({
+    data,
+    graphRender,
+    nodeRender,
+    edgeRender,
+    rankdir = "TB",
+    align = undefined,
+  }: Props) => {
     const [graph, nodeMap, edgeMap] = useMemo(() => {
       const nodeMap: { [key: string]: Node } = {};
       const edgeMap: { [key: string]: Edge } = {};
@@ -27,7 +36,7 @@ export const Renderer = memo(
         multigraph: true,
         compound: true,
       });
-      g.setGraph({});
+      g.setGraph({ rankdir, align });
       g.setDefaultNodeLabel(() => ({}));
       g.setDefaultEdgeLabel(() => ({}));
 
