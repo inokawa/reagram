@@ -1,5 +1,5 @@
 {
-  "name": "react-dot",
+  "name": "reagram",
   "version": "0.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -41,13 +41,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/inokawa/react-dot.git"
+    "url": "git+https://github.com/inokawa/reagram.git"
   },
   "keywords": [],
   "author": "inokawa <stratoooo-taster@yahoo.co.jp> (https://github.com/inokawa/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/inokawa/react-dot/issues"
+    "url": "https://github.com/inokawa/reagram/issues"
   },
-  "homepage": "https://github.com/inokawa/react-dot#readme"
+  "homepage": "https://github.com/inokawa/reagram#readme"
 }
