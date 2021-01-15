@@ -27,6 +27,8 @@ type GraphOpts = {
   ranksep?: number;
   acyclicer?: "greedy";
   ranker?: "network-simplex" | "tight-tree" | "longest-path";
+  nodeWidth?: number;
+  nodeHeight?: number;
 };
 
 export const Renderer = memo(
@@ -42,6 +44,8 @@ export const Renderer = memo(
     ranksep,
     acyclicer,
     ranker,
+    nodeWidth,
+    nodeHeight,
   }: Props) => {
     const [graph, nodeMap, edgeMap] = useMemo(() => {
       const nodeMap: { [key: string]: Node } = {};
@@ -67,7 +71,10 @@ export const Renderer = memo(
       g.setDefaultEdgeLabel(() => ({}));
 
       const setNode = (node: Node, parentId?: string) => {
-        g.setNode(node.id, { width: 10, height: 10 });
+        g.setNode(node.id, {
+          width: nodeWidth !== undefined ? nodeWidth : 10,
+          height: nodeHeight !== undefined ? nodeHeight : 10,
+        });
         nodeMap[node.id] = node;
         if (parentId) {
           g.setParent(node.id, parentId);
@@ -109,7 +116,6 @@ export const Renderer = memo(
     });
     graph.nodes().forEach((id: any) => {
       const n = graph.node(id);
-      console.log(n.width);
       nodes.push(
         <Fragment key={id}>
           {nodeRender({

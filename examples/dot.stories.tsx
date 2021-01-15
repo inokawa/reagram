@@ -86,6 +86,9 @@ export const UnixFamilyTree = () => {
           data={parseDot(unix_family_tree)[0]}
           nodeRender={nodeRender}
           edgeRender={edgeRender}
+          nodesep={10}
+          nodeWidth={80}
+          nodeHeight={40}
         />
       </g>
     </svg>
