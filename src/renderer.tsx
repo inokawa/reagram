@@ -23,6 +23,7 @@ type GraphOpts = {
   edgesep?: number;
   ranksep?: number;
   acyclicer?: "greedy";
+  ranker?: "network-simplex" | "tight-tree" | "longest-path";
 };
 
 export const Renderer = memo(
@@ -37,6 +38,7 @@ export const Renderer = memo(
     edgesep,
     ranksep,
     acyclicer,
+    ranker,
   }: Props) => {
     const [graph, nodeMap, edgeMap] = useMemo(() => {
       const nodeMap: { [key: string]: Node } = {};
@@ -55,6 +57,7 @@ export const Renderer = memo(
       edgesep !== undefined && (graphOpts.edgesep = edgesep);
       ranksep !== undefined && (graphOpts.ranksep = ranksep);
       acyclicer !== undefined && (graphOpts.acyclicer = acyclicer);
+      ranker !== undefined && (graphOpts.ranker = ranker);
       g.setGraph(graphOpts);
 
       g.setDefaultNodeLabel(() => ({}));
