@@ -8,7 +8,10 @@ export type Props = {
   graphRender?: (node: { data: Graph }) => React.ReactNode;
   nodeRender: (node: {
     data: Node;
-    point: { x: number; y: number };
+    x: number;
+    y: number;
+    width: number;
+    height: number;
   }) => React.ReactNode;
   edgeRender: (node: {
     data: Edge;
@@ -106,9 +109,16 @@ export const Renderer = memo(
     });
     graph.nodes().forEach((id: any) => {
       const n = graph.node(id);
+      console.log(n.width);
       nodes.push(
         <Fragment key={id}>
-          {nodeRender({ data: nodeMap[id], point: { x: n.x, y: n.y } })}
+          {nodeRender({
+            data: nodeMap[id],
+            x: n.x,
+            y: n.y,
+            width: n.width,
+            height: n.height,
+          })}
         </Fragment>
       );
     });

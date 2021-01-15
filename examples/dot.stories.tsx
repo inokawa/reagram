@@ -13,28 +13,28 @@ const nodeRender = (n) =>
   n.data.type === "node" ? (
     <g>
       <rect
-        x={n.point.x - 10}
-        y={n.point.y - 10}
-        width="20"
-        height="20"
+        x={n.x - n.width / 2}
+        y={n.y - n.height / 2}
+        width={n.width}
+        height={n.height}
         fill="gray"
       />
-      <text x={n.point.x} y={n.point.y}>
+      <text x={n.x} y={n.y}>
         {n.data.id}
       </text>
     </g>
   ) : (
     <g>
       <rect
-        x={n.point.x - 50}
-        y={n.point.y - 120}
-        width="100"
-        height="240"
+        x={n.x - n.width / 2}
+        y={n.y - n.height / 2}
+        width={n.width}
+        height={n.height}
         fillOpacity="0.2"
         fill="lightgray"
         stroke="lightgray"
       />
-      <text x={n.point.x} y={n.point.y}>
+      <text x={n.x} y={n.y}>
         {n.data.id}
       </text>
     </g>
