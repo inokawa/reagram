@@ -1,5 +1,6 @@
 import React from "react";
 import cluster from "../fixtures/cluster.gv";
+import data_structures from "../fixtures/data_structures.gv";
 import finite_automaton from "../fixtures/finite_automaton.gv";
 import unix_family_tree from "../fixtures/unix_family_tree.gv";
 
@@ -58,6 +59,23 @@ export const Cluster = () => {
           data={parseDot(cluster)[0]}
           nodeRender={nodeRender}
           edgeRender={edgeRender}
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const DataStructures = () => {
+  return (
+    <svg width="1000" height="1000">
+      <g transform="translate(50,50)">
+        <Reagram
+          data={parseDot(data_structures)[0]}
+          nodeRender={nodeRender}
+          edgeRender={edgeRender}
+          rankdir="LR"
+          nodeWidth={40}
+          nodeHeight={40}
         />
       </g>
     </svg>
