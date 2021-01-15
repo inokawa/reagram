@@ -1,12 +1,12 @@
 # reagram
 
-![check](https://github.com/inokawa/reagram/workflows/check/badge.svg)
+![check](https://github.com/inokawa/reagram/workflows/check/badge.svg) ![demo](https://github.com/inokawa/reagram/workflows/demo/badge.svg)
 
 React component to render customizable graph/diagram.
 
 ## Demo
 
-TODO
+https://inokawa.github.io/reagram/
 
 ## Install
 
