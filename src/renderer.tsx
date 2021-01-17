@@ -19,7 +19,7 @@ export type Props = {
   }) => React.ReactNode;
 } & GraphOpts;
 
-type GraphOpts = {
+export type GraphOpts = {
   rankdir?: "TB" | "BT" | "LR" | "RL";
   align?: "UL" | "UR" | "DL" | "DR";
   nodesep?: number;
