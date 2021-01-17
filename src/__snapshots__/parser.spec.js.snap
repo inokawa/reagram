@@ -652,6 +652,494 @@ Array [
 ]
 `;
 
+exports[`parse go_package_imports.gv 1`] = `
+Array [
+  Object {
+    "attr": Object {},
+    "edges": Array [
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n1",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n3",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n4",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n5",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n6",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n7",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n8",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n0",
+        "to": "n9",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n1",
+        "to": "n10",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n1",
+        "to": "n2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n1",
+        "to": "n8",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n1",
+        "to": "n9",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n1",
+        "to": "n11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n2",
+        "to": "n11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n2",
+        "to": "n7",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n3",
+        "to": "n4",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n3",
+        "to": "n5",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n3",
+        "to": "n6",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n3",
+        "to": "n8",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n3",
+        "to": "n9",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n4",
+        "to": "n12",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n5",
+        "to": "n10",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n5",
+        "to": "n13",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n5",
+        "to": "n9",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n5",
+        "to": "n11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n5",
+        "to": "n14",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n6",
+        "to": "n2",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n6",
+        "to": "n7",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n6",
+        "to": "n15",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n6",
+        "to": "n11",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n6",
+        "to": "n10",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n6",
+        "to": "n8",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n6",
+        "to": "n9",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n7",
+        "to": "n16",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n7",
+        "to": "n17",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n7",
+        "to": "n18",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n7",
+        "to": "n15",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n10",
+        "to": "n19",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n10",
+        "to": "n15",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n11",
+        "to": "n12",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n12",
+        "to": "n17",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n12",
+        "to": "n15",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n13",
+        "to": "n15",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n13",
+        "to": "n19",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n13",
+        "to": "n14",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n14",
+        "to": "n15",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n16",
+        "to": "n15",
+        "type": "edge",
+      },
+      Object {
+        "attr": Object {},
+        "from": "n18",
+        "to": "n15",
+        "type": "edge",
+      },
+    ],
+    "id": "regexp",
+    "nodes": Array [
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/regexp",
+          "label": "regexp",
+          "tooltip": "Package regexp implements regular expression search.",
+        },
+        "id": "n0",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/bytes",
+          "label": "bytes",
+          "tooltip": "Package bytes implements functions for the manipulation of byte slices.",
+        },
+        "id": "n1",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/io",
+          "label": "io",
+          "tooltip": "Package io provides basic interfaces to I/O primitives.",
+        },
+        "id": "n2",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/regexp/syntax",
+          "label": "regexp/syntax",
+          "tooltip": "Package syntax parses regular expressions into parse trees and compiles parse trees into programs.",
+        },
+        "id": "n3",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/sort",
+          "label": "sort",
+          "tooltip": "Package sort provides primitives for sorting slices and user-defined collections.",
+        },
+        "id": "n4",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/strconv",
+          "label": "strconv",
+          "tooltip": "Package strconv implements conversions to and from string representations of basic data types.",
+        },
+        "id": "n5",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/strings",
+          "label": "strings",
+          "tooltip": "Package strings implements simple functions to manipulate UTF-8 encoded strings.",
+        },
+        "id": "n6",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/sync",
+          "label": "sync",
+          "tooltip": "Package sync provides basic synchronization primitives such as mutual exclusion locks.",
+        },
+        "id": "n7",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/unicode",
+          "label": "unicode",
+          "tooltip": "Package unicode provides data and functions to test some properties of Unicode code points.",
+        },
+        "id": "n8",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/unicode/utf8",
+          "label": "unicode/utf8",
+          "tooltip": "Package utf8 implements functions and constants to support text encoded in UTF-8.",
+        },
+        "id": "n9",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/internal/bytealg",
+          "label": "internal/bytealg",
+          "tooltip": "",
+        },
+        "id": "n10",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/errors",
+          "label": "errors",
+          "tooltip": "Package errors implements functions to manipulate errors.",
+        },
+        "id": "n11",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/internal/reflectlite",
+          "label": "internal/reflectlite",
+          "tooltip": "Package reflectlite implements lightweight version of reflect, not using any package except for \\"runtime\\" and \\"unsafe\\".",
+        },
+        "id": "n12",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/math",
+          "label": "math",
+          "tooltip": "Package math provides basic constants and mathematical functions.",
+        },
+        "id": "n13",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/math/bits",
+          "label": "math/bits",
+          "tooltip": "Package bits implements bit counting and manipulation functions for the predeclared unsigned integer types.",
+        },
+        "id": "n14",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/unsafe",
+          "label": "unsafe",
+          "tooltip": "Package unsafe contains operations that step around the type safety of Go programs.",
+        },
+        "id": "n15",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/internal/race",
+          "label": "internal/race",
+          "tooltip": "Package race contains helper functions for manually instrumenting code for the race detector.",
+        },
+        "id": "n16",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/runtime",
+          "label": "runtime",
+          "tooltip": "",
+        },
+        "id": "n17",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/sync/atomic",
+          "label": "sync/atomic",
+          "tooltip": "Package atomic provides low-level atomic memory primitives useful for implementing synchronization algorithms.",
+        },
+        "id": "n18",
+        "type": "node",
+      },
+      Object {
+        "attr": Object {
+          "URL": "https://godoc.org/internal/cpu",
+          "label": "internal/cpu",
+          "tooltip": "Package cpu implements processor feature detection used by the Go standard library.",
+        },
+        "id": "n19",
+        "type": "node",
+      },
+    ],
+    "type": "digraph",
+  },
+]
+`;
+
 exports[`parse linux_kernel_diagram.gv 1`] = `
 Array [
   Object {
