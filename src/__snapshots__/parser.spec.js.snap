@@ -2784,6 +2784,652 @@ Array [
 ]
 `;
 
+exports[`parse math_parse_tree.gv 1`] = `
+Array [
+  Object {
+    "attr": Object {
+      "label": "((+ (* (X) (- (- (X) (X)) (X))) (% (+ (X) (X)) (COS (- (X) (X))))) (EXP (* (X) (X))) (+ (% (EXP (SIN (+ (X) (X)))) (SIN (* (X) (EXP (* (X) (X)))))) (* (X) (X))) (% (EXP (% (X) (% (X) (X)))) (EXP (SIN (X)))))",
+    },
+    "edges": Array [],
+    "id": undefined,
+    "nodes": Array [
+      Object {
+        "attr": Object {
+          "label": "(+ (* (X) (- (- (X) (X)) (X))) (% (+ (X) (X)) (COS (- (X) (X)))))",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "n002",
+            "to": "n003",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n003",
+            "to": "n004",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n003",
+            "to": "n005",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n005",
+            "to": "n006",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n006",
+            "to": "n007",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n006",
+            "to": "n008",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n005",
+            "to": "n009",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n002",
+            "to": "n010",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n010",
+            "to": "n011",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n011",
+            "to": "n012",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n011",
+            "to": "n013",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n010",
+            "to": "n014",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n014",
+            "to": "n015",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n015",
+            "to": "n016",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n015",
+            "to": "n017",
+            "type": "edge",
+          },
+        ],
+        "id": "cluster01",
+        "nodes": Array [
+          Object {
+            "attr": Object {
+              "label": "+",
+            },
+            "id": "n002",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "*",
+            },
+            "id": "n003",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n004",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "-",
+            },
+            "id": "n005",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "-",
+            },
+            "id": "n006",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n007",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n008",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n009",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "%",
+            },
+            "id": "n010",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "+",
+            },
+            "id": "n011",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n012",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n013",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "COS",
+            },
+            "id": "n014",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "-",
+            },
+            "id": "n015",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n016",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n017",
+            "type": "node",
+          },
+        ],
+        "type": "graph",
+      },
+      Object {
+        "attr": Object {
+          "label": "(EXP (* (X) (X)))",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "n018",
+            "to": "n019",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n019",
+            "to": "n020",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n019",
+            "to": "n021",
+            "type": "edge",
+          },
+        ],
+        "id": "cluster17",
+        "nodes": Array [
+          Object {
+            "attr": Object {
+              "label": "EXP",
+            },
+            "id": "n018",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "*",
+            },
+            "id": "n019",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n020",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n021",
+            "type": "node",
+          },
+        ],
+        "type": "graph",
+      },
+      Object {
+        "attr": Object {
+          "label": "(+ (% (EXP (SIN (+ (X) (X)))) (SIN (* (X) (EXP (* (X) (X)))))) (* (X) (X)))",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "n022",
+            "to": "n023",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n023",
+            "to": "n024",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n024",
+            "to": "n025",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n025",
+            "to": "n026",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n026",
+            "to": "n027",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n026",
+            "to": "n028",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n023",
+            "to": "n029",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n029",
+            "to": "n030",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n030",
+            "to": "n031",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n030",
+            "to": "n032",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n032",
+            "to": "n033",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n033",
+            "to": "n034",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n033",
+            "to": "n035",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n022",
+            "to": "n036",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n036",
+            "to": "n037",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n036",
+            "to": "n038",
+            "type": "edge",
+          },
+        ],
+        "id": "cluster21",
+        "nodes": Array [
+          Object {
+            "attr": Object {
+              "label": "+",
+            },
+            "id": "n022",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "%",
+            },
+            "id": "n023",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "EXP",
+            },
+            "id": "n024",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "SIN",
+            },
+            "id": "n025",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "+",
+            },
+            "id": "n026",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n027",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n028",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "SIN",
+            },
+            "id": "n029",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "*",
+            },
+            "id": "n030",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n031",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "EXP",
+            },
+            "id": "n032",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "*",
+            },
+            "id": "n033",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n034",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n035",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "*",
+            },
+            "id": "n036",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n037",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n038",
+            "type": "node",
+          },
+        ],
+        "type": "graph",
+      },
+      Object {
+        "attr": Object {
+          "label": "(% (EXP (% (X) (% (X) (X)))) (EXP (SIN (X))))",
+        },
+        "edges": Array [
+          Object {
+            "attr": Object {},
+            "from": "n039",
+            "to": "n040",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n040",
+            "to": "n041",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n041",
+            "to": "n042",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n041",
+            "to": "n043",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n043",
+            "to": "n044",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n043",
+            "to": "n045",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n039",
+            "to": "n046",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n046",
+            "to": "n047",
+            "type": "edge",
+          },
+          Object {
+            "attr": Object {},
+            "from": "n047",
+            "to": "n048",
+            "type": "edge",
+          },
+        ],
+        "id": "cluster38",
+        "nodes": Array [
+          Object {
+            "attr": Object {
+              "label": "%",
+            },
+            "id": "n039",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "EXP",
+            },
+            "id": "n040",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "%",
+            },
+            "id": "n041",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n042",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "%",
+            },
+            "id": "n043",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n044",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n045",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "EXP",
+            },
+            "id": "n046",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "SIN",
+            },
+            "id": "n047",
+            "type": "node",
+          },
+          Object {
+            "attr": Object {
+              "label": "X",
+            },
+            "id": "n048",
+            "type": "node",
+          },
+        ],
+        "type": "graph",
+      },
+    ],
+    "type": "graph",
+  },
+]
+`;
+
 exports[`parse undirected_graph_clusters.gv 1`] = `
 Array [
   Object {

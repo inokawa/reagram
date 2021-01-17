@@ -2,6 +2,7 @@ import React from "react";
 import cluster from "../fixtures/cluster.gv";
 import data_structures from "../fixtures/data_structures.gv";
 import finite_automaton from "../fixtures/finite_automaton.gv";
+import math_parse_tree from "../fixtures/math_parse_tree.gv";
 import unix_family_tree from "../fixtures/unix_family_tree.gv";
 
 import Reagram, { parseDot } from "../src";
@@ -88,6 +89,20 @@ export const FiniteStateMachine = () => {
       <g transform="translate(50,50)">
         <Reagram
           data={parseDot(finite_automaton)[0]}
+          nodeRender={nodeRender}
+          edgeRender={edgeRender}
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const MathParseTree = () => {
+  return (
+    <svg width="1600" height="1000">
+      <g transform="translate(50,50)">
+        <Reagram
+          data={parseDot(math_parse_tree)[0]}
           nodeRender={nodeRender}
           edgeRender={edgeRender}
         />
