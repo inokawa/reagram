@@ -86,11 +86,42 @@ export const DataStructures = () => {
 export const FiniteStateMachine = () => {
   return (
     <svg width="1000" height="1000">
+      <marker
+        xmlns="http://www.w3.org/2000/svg"
+        id="arrow"
+        viewBox="0 0 10 10"
+        refX="10"
+        refY="5"
+        markerUnits="strokeWidth"
+        markerWidth="20"
+        markerHeight="10"
+        orient="auto"
+      >
+        <path d="M 0 0 L 10 5 L 0 10 z" stroke="lightgray" />
+      </marker>
       <g transform="translate(50,50)">
         <Reagram
           data={parseDot(finite_automaton)[0]}
-          nodeRender={nodeRender}
-          edgeRender={edgeRender}
+          nodeRender={(n) => (
+            <g>
+              <circle cx={n.x} cy={n.y} r={n.width / 2} fill="gray" />
+              <text x={n.x} y={n.y}>
+                {n.data.id}
+              </text>
+            </g>
+          )}
+          edgeRender={(n) => (
+            <polyline
+              points={n.points.reduce((acc, p) => {
+                acc += `${p.x},${p.y} `;
+                return acc;
+              }, "")}
+              fill="none"
+              stroke="lightgray"
+              marker-end="url(#arrow)"
+            />
+          )}
+          rankdir="LR"
         />
       </g>
     </svg>
