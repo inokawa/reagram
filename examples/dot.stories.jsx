@@ -1,7 +1,7 @@
 import React from "react";
 import cluster from "../fixtures/cluster.gv";
-import data_structures from "../fixtures/data_structures.gv";
 import finite_automaton from "../fixtures/finite_automaton.gv";
+import go_package_imports from "../fixtures/go_package_imports.gv";
 import math_parse_tree from "../fixtures/math_parse_tree.gv";
 import unix_family_tree from "../fixtures/unix_family_tree.gv";
 
@@ -66,23 +66,6 @@ export const Cluster = () => {
   );
 };
 
-export const DataStructures = () => {
-  return (
-    <svg width="1000" height="1000">
-      <g transform="translate(50,50)">
-        <Reagram
-          data={parseDot(data_structures)[0]}
-          nodeRender={nodeRender}
-          edgeRender={edgeRender}
-          rankdir="LR"
-          nodeWidth={40}
-          nodeHeight={40}
-        />
-      </g>
-    </svg>
-  );
-};
-
 export const FiniteStateMachine = () => {
   return (
     <svg width="1000" height="1000">
@@ -122,6 +105,50 @@ export const FiniteStateMachine = () => {
             />
           )}
           rankdir="LR"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const GoPackageImports = () => {
+  return (
+    <svg width="1000" height="1000">
+      <marker
+        xmlns="http://www.w3.org/2000/svg"
+        id="arrow"
+        viewBox="0 0 10 10"
+        refX="10"
+        refY="5"
+        markerUnits="strokeWidth"
+        markerWidth="20"
+        markerHeight="10"
+        orient="auto"
+      >
+        <path d="M 0 0 L 10 5 L 0 10 z" stroke="lightgray" />
+      </marker>
+      <g transform="translate(50,50)">
+        <Reagram
+          data={parseDot(go_package_imports)[0]}
+          nodeRender={(n) => (
+            <g>
+              <circle cx={n.x} cy={n.y} r={n.width / 2} fill="gray" />
+              <text x={n.x} y={n.y}>
+                {n.data.id}
+              </text>
+            </g>
+          )}
+          edgeRender={(n) => (
+            <polyline
+              points={n.points.reduce((acc, p) => {
+                acc += `${p.x},${p.y} `;
+                return acc;
+              }, "")}
+              fill="none"
+              stroke="lightgray"
+              marker-end="url(#arrow)"
+            />
+          )}
         />
       </g>
     </svg>
