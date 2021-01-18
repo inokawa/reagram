@@ -18,8 +18,8 @@ export type Node = {
 
 export type Edge = {
   type: "edge";
-  from: string;
-  to: string;
+  source: string;
+  target: string;
   attr: Attr;
 };
 
@@ -168,8 +168,8 @@ const processEdge = (
     var nextNode = edge_list[i];
     edges.push({
       type: "edge",
-      from: prevNode.id,
-      to: nextNode.id,
+      source: prevNode.id,
+      target: nextNode.id,
       attr: { ...edgeAttr, ...attr },
     });
     if (!nodeTemp[nextNode.id]) {

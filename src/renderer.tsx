@@ -92,8 +92,8 @@ export const Renderer = memo(
         }
       };
       const processEdge = (edge: Edge) => {
-        g.setEdge(edge.from, edge.to);
-        edgeMap[`${edge.from}-${edge.to}`] = edge;
+        g.setEdge(edge.source, edge.target);
+        edgeMap[`${edge.source}-${edge.target}`] = edge;
       };
 
       data.nodes.forEach((node) => {
