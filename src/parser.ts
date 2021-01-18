@@ -4,8 +4,17 @@ import * as dot from "./types/dotparser";
 
 export type Graph = {
   type: "graph" | "digraph";
+  strict?: boolean;
   id?: string;
-  nodes: (Graph | Node)[];
+  nodes: (SubGraph | Node)[];
+  edges: Edge[];
+  attr: Attr;
+};
+
+export type SubGraph = {
+  type: "subgraph";
+  id?: string;
+  nodes: (SubGraph | Node)[];
   edges: Edge[];
   attr: Attr;
 };
@@ -42,19 +51,41 @@ const reduceGraph = (
   edgeAttr: Attr,
   nodeTemp: { [id: string]: Node }
 ): Graph => {
+  const { type, strict, ...subGraph } = graph;
+  const res = reduceSubGraph(
+    { type: "subgraph", ...subGraph },
+    graphAttr,
+    nodeAttr,
+    edgeAttr,
+    nodeTemp
+  );
+  return {
+    ...res,
+    type,
+    strict,
+  };
+};
+
+const reduceSubGraph = (
+  graph: dot.Subgraph,
+  graphAttr: Attr,
+  nodeAttr: Attr,
+  edgeAttr: Attr,
+  nodeTemp: { [id: string]: Node }
+): SubGraph => {
   const reduceStatements = (stmts: dot.Unknown[]) =>
-    stmts.reduce<[(Graph | Node)[], Edge[]]>(
+    stmts.reduce<[(SubGraph | Node)[], Edge[]]>(
       (acc, st) => {
         switch (st.type) {
           case "subgraph":
             const sgst = st as dot.Subgraph;
             acc[0].push(
-              reduceGraph(
+              reduceSubGraph(
                 {
-                  type: graph.type,
+                  type: "subgraph",
                   id: sgst.id,
                   children: sgst.children,
-                } as dot.Graph,
+                },
                 { ...graphAttr },
                 { ...nodeAttr },
                 { ...edgeAttr },
@@ -107,7 +138,7 @@ const reduceGraph = (
 
   const [nodes, edges] = reduceStatements(graph.children || []);
   return {
-    type: graph.type,
+    type: "subgraph",
     id: graph.id,
     nodes,
     edges,

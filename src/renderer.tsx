@@ -1,7 +1,7 @@
 import React, { Fragment, memo, useMemo } from "react";
 // @ts-expect-error
 import * as dagre from "@dagrejs/dagre";
-import { Graph, Node, Edge } from "./parser";
+import { Graph, Node, Edge, SubGraph } from "./parser";
 
 export type Props = {
   data: Graph;
@@ -53,7 +53,7 @@ export const Renderer = memo(
 
       const g = new dagre.graphlib.Graph({
         directed: data.type === "digraph",
-        multigraph: true,
+        multigraph: !data.strict,
         compound: true,
       });
 
@@ -80,8 +80,8 @@ export const Renderer = memo(
           g.setParent(node.id, parentId);
         }
       };
-      const processNode = (node: Graph | Node, parentId?: string) => {
-        if (node.type === "graph" || node.type === "digraph") {
+      const processNode = (node: SubGraph | Node, parentId?: string) => {
+        if (node.type === "subgraph") {
           setNode((node as any) as Node /* TODO */, parentId);
           node.nodes.forEach((n) => {
             processNode(n, node.id);

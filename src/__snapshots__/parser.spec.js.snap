@@ -111,7 +111,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -169,7 +169,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -186,6 +186,7 @@ Array [
         "type": "node",
       },
     ],
+    "strict": undefined,
     "type": "digraph",
   },
 ]
@@ -455,6 +456,7 @@ Array [
         "type": "node",
       },
     ],
+    "strict": undefined,
     "type": "digraph",
   },
 ]
@@ -647,6 +649,7 @@ Array [
         "type": "node",
       },
     ],
+    "strict": undefined,
     "type": "digraph",
   },
 ]
@@ -1135,6 +1138,7 @@ Array [
         "type": "node",
       },
     ],
+    "strict": undefined,
     "type": "digraph",
   },
 ]
@@ -1578,7 +1582,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -1801,7 +1805,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2124,7 +2128,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2345,7 +2349,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2541,7 +2545,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2689,7 +2693,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2750,7 +2754,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2850,7 +2854,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2909,7 +2913,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -2951,7 +2955,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3009,7 +3013,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3052,7 +3056,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3115,7 +3119,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3221,7 +3225,7 @@ Array [
         ],
         "id": "mem",
         "nodes": Array [],
-        "type": "digraph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3267,6 +3271,7 @@ Array [
         "type": "node",
       },
     ],
+    "strict": undefined,
     "type": "digraph",
   },
 ]
@@ -3492,7 +3497,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "graph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3549,7 +3554,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "graph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3775,7 +3780,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "graph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -3910,9 +3915,10 @@ Array [
             "type": "node",
           },
         ],
-        "type": "graph",
+        "type": "subgraph",
       },
     ],
+    "strict": undefined,
     "type": "graph",
   },
 ]
@@ -4000,10 +4006,10 @@ Array [
                 "type": "node",
               },
             ],
-            "type": "graph",
+            "type": "subgraph",
           },
         ],
-        "type": "graph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {
@@ -4030,7 +4036,7 @@ Array [
             "type": "node",
           },
         ],
-        "type": "graph",
+        "type": "subgraph",
       },
       Object {
         "attr": Object {},
@@ -4043,6 +4049,7 @@ Array [
         "type": "node",
       },
     ],
+    "strict": undefined,
     "type": "graph",
   },
 ]
@@ -4681,6 +4688,7 @@ Array [
         "type": "node",
       },
     ],
+    "strict": undefined,
     "type": "digraph",
   },
 ]
