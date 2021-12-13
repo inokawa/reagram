@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@dagrejs/dagre": "0.8.0",
-    "dotparser": "1.0.0"
+    "dotparser-normalized": "0.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
